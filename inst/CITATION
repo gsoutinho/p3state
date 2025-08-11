@@ -1,0 +1,46 @@
+pkg <- "p3state.msm"
+
+citHeader(paste("To cite the R package", pkg, "in publications use:"))
+
+year  <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers  <- paste("R package version", meta$Version)
+url   <- paste0("https://CRAN.R-project.org/package=", pkg)
+title <- "Analyzing Survival Data from an Illness-Death Model"
+
+bibentry(
+  bibtype = "Manual",
+  title   = paste(pkg, ": ", title, sep = ""),
+  author  = c(
+    person("Luís", "Meira-Machado"),
+    person("Javier", "Roca-Pardiñas"),
+    person("Artur", "Araújo")
+  ),
+  year    = year,
+  note    = vers,
+  url     = url,
+  textVersion = paste(
+    "Luís Meira-Machado, Javier Roca-Pardiñas and Artur Araújo (", year, "). ",
+    pkg, ": ", title, ". ", vers, ". URL ", url, ".", sep = ""
+  )
+)
+
+bibentry(
+  bibtype = "Article",
+  title   = "p3state.msm: Analyzing Survival Data from an Illness-Death Model",
+  author  = c(
+    person("Luís", "Meira-Machado"),
+    person("Javier", "Roca-Pardiñas")
+  ),
+  journal = "Journal of Statistical Software",
+  year    = "2011",
+  volume  = "38",
+  number  = "3",
+  pages   = "1--18",
+  doi     = "10.18637/jss.v038.i03",
+  textVersion = paste(
+    "Luis Meira-Machado, Javier Roca-Pardiñas (2011). ",
+    "“p3state.msm: Analyzing Survival Data from an Illness-Death Model”. ",
+    "Journal of Statistical Software, 38(3), 1-18. doi:10.18637/jss.v038.i03",
+    sep = ""
+  )
+)
